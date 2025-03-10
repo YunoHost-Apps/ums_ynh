@@ -1,3 +1,5 @@
+#:schema https://raw.githubusercontent.com/YunoHost/apps/master/schemas/manifest.v2.schema.json
+
 packaging_format = 2
 
 id = "ums"
@@ -19,8 +21,11 @@ code = "https://github.com/UniversalMediaServer/UniversalMediaServer"
 yunohost = ">= 11.1.18"
 architectures = "all"
 multi_instance = false
+
 ldap = false
+
 sso = false
+
 disk = "1G"
 ram.build = "350M"
 ram.runtime = "350M"
@@ -55,27 +60,22 @@ ram.runtime = "350M"
     default = "eth0"
 
 [resources]
-        [resources.sources.main]
-        arm64.url = "https://github.com/UniversalMediaServer/UniversalMediaServer/releases/download/14.10.1/UMS-Linux-14.10.1-arm64.tgz"
-        arm64.sha256 = "e9f93b7be98417bcecba1599856c3368593f87f80be54c94dc25c26bb2763ae1"
-        amd64.url = "https://github.com/UniversalMediaServer/UniversalMediaServer/releases/download/14.10.1/UMS-Linux-14.10.1-x86_64.tgz"
-        amd64.sha256 = "13f5acfa236a96296b383a3bfa49cb157582134f8d6d3697f8eca431d9a3efc5"
-        armhf.url = "https://github.com/UniversalMediaServer/UniversalMediaServer/releases/download/14.10.1/UMS-Linux-14.10.1-armhf.tgz"
-        armhf.sha256 = "f769227a1e77c25ef9ff72c6685d28ae00feac7a519ae3d0856dbc0ae170c212"
-        i386.url = "https://github.com/UniversalMediaServer/UniversalMediaServer/releases/download/14.10.1/UMS-Linux-14.10.1-x86.tgz"
-        i386.sha256 = "c40ac1da6806d51ebebe0c11d1319e53f617367501afa4a8ca4ee20a1085ee63"
+    [resources.sources.main]
+    arm64.url = "https://github.com/UniversalMediaServer/UniversalMediaServer/releases/download/14.10.1/UMS-Linux-14.10.1-arm64.tgz"
+    arm64.sha256 = "e9f93b7be98417bcecba1599856c3368593f87f80be54c94dc25c26bb2763ae1"
+    amd64.url = "https://github.com/UniversalMediaServer/UniversalMediaServer/releases/download/14.10.1/UMS-Linux-14.10.1-x86_64.tgz"
+    amd64.sha256 = "13f5acfa236a96296b383a3bfa49cb157582134f8d6d3697f8eca431d9a3efc5"
+    armhf.url = "https://github.com/UniversalMediaServer/UniversalMediaServer/releases/download/14.10.1/UMS-Linux-14.10.1-armhf.tgz"
+    armhf.sha256 = "f769227a1e77c25ef9ff72c6685d28ae00feac7a519ae3d0856dbc0ae170c212"
+    i386.url = "https://github.com/UniversalMediaServer/UniversalMediaServer/releases/download/14.10.1/UMS-Linux-14.10.1-x86.tgz"
+    i386.sha256 = "c40ac1da6806d51ebebe0c11d1319e53f617367501afa4a8ca4ee20a1085ee63"
 
-        autoupdate.strategy = "latest_github_release"
+    autoupdate.strategy = "latest_github_release"
 
-        autoupdate.asset.arm64 = ".*-arm64.tgz"
-        autoupdate.asset.amd64 = ".*-x86_64.tgz"
-        autoupdate.asset.armhf = ".*-armhf.tgz"
-        autoupdate.asset.i386 = ".*-x86.tgz"
-
-    [resources.ports]
-    main.default = 9001
-    rend.default = 5001
-    rend.exposed = "TCP"
+    autoupdate.asset.arm64 = ".*-arm64.tgz"
+    autoupdate.asset.amd64 = ".*-x86_64.tgz"
+    autoupdate.asset.armhf = ".*-armhf.tgz"
+    autoupdate.asset.i386 = ".*-x86.tgz"
 
     [resources.system_user]
     #UMS require a home path for the user as config files are stored in there
@@ -88,6 +88,11 @@ ram.runtime = "350M"
     [resources.permissions]
     main.url = "/"
     main.auth_header=false
+
+    [resources.ports]
+    main.default = 9001
+    rend.default = 5001
+    rend.exposed = "TCP"
 
     [resources.apt]
     packages = "mediainfo dcraw mencoder mplayer vlc"
