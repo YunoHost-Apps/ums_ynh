@@ -13,7 +13,7 @@ maintainers = ["Krakinou"]
 
 [upstream]
 license = "GPL-2.0-or-later"
-website = "www.universalmediaserver.com"
+website = "https://www.universalmediaserver.com"
 admindoc = "https://github.com/UniversalMediaServer/UniversalMediaServer/wiki"
 code = "https://github.com/UniversalMediaServer/UniversalMediaServer"
 
@@ -37,8 +37,8 @@ ram.runtime = "350M"
     type = "domain"
 
     [install.init_main_permission]
-    help.en = "Everybody will be able to access your media on the internet without connecting to Yunohost"
-    help.fr = "Tout le monde pourra voir vos media sans se connecter à Yunohost"
+    help.en = "Everybody will be able to access your media on the internet without connecting to YunoHost"
+    help.fr = "Tout le monde pourra voir vos media sans se connecter à YunoHost"
     type = "group"
     default = "visitors"
 
@@ -53,7 +53,7 @@ ram.runtime = "350M"
 
     [install.interface]
     ask.en = "Which network interface do you want to use?"
-    ask.fr = "Quel réseau souhaitez vous utiliser?"
+    ask.fr = "Quel réseau souhaitez vous utiliser ?"
     help.en = "On lan, the interface is usually eth0, on wifi it s usually wlan0"
     help.fr = "En filaire, l interface est souvent eth0, en wifi wlan0"
     type = "string"
