@@ -10,7 +10,7 @@ It shall NOT be edited by hand.
 
 A DLNA, UPnP and HTTP(S) Media Server
 
-[![🌐 Official app website](https://img.shields.io/badge/Official_app_website-darkgreen?style=for-the-badge)](www.universalmediaserver.com)
+[![🌐 Official app website](https://img.shields.io/badge/Official_app_website-darkgreen?style=for-the-badge)](https://www.universalmediaserver.com)
 [![Version: 15.0.0~ynh1](https://img.shields.io/badge/Version-15.0.0~ynh1-rgb(18,138,11)?style=for-the-badge)](https://ci-apps.yunohost.org/ci/apps/ums/)
 
 <div align="center">
